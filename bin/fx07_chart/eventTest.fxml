@@ -7,11 +7,10 @@
 <?import javafx.scene.chart.PieChart?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="309.0" prefWidth="706.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/16" fx:controller="fx07_chart.Controller">
+<AnchorPane prefHeight="387.0" prefWidth="910.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx07_chart.Controller">
    <children>
-      <PieChart fx:id="pieChart" layoutX="21.0" layoutY="17.0" prefHeight="133.0" prefWidth="153.0" />
-      <BarChart fx:id="barChart" layoutX="242.0" layoutY="17.0" prefHeight="131.0" prefWidth="232.0">
+      <PieChart fx:id="pieChart" layoutX="21.0" layoutY="17.0" prefHeight="234.0" prefWidth="282.0" />
+      <BarChart fx:id="barChart" layoutX="318.0" layoutY="17.0" prefHeight="204.0" prefWidth="293.0">
         <xAxis>
           <CategoryAxis side="BOTTOM" />
         </xAxis>
@@ -19,7 +18,7 @@
           <NumberAxis side="LEFT" />
         </yAxis>
       </BarChart>
-      <AreaChart fx:id="areaChart" layoutX="553.0" layoutY="27.0" prefHeight="194.0" prefWidth="207.0">
+      <AreaChart fx:id="areaChart" layoutX="654.0" layoutY="22.0" prefHeight="190.0" prefWidth="203.0">
         <xAxis>
           <CategoryAxis side="BOTTOM" />
         </xAxis>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="500.0" prefWidth="1000.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171">
+   <children>
+      <HBox layoutY="50.0" prefHeight="291.0" prefWidth="1000.0">
+         <children>
+            <PieChart fx:id="pieChart" prefHeight="291.0" prefWidth="333.0" />
+            <BarChart fx:id="barChart" prefHeight="291.0" prefWidth="333.0">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </BarChart>
+            <AreaChart fx:id="areaChart" prefHeight="291.0" prefWidth="333.0">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </AreaChart>
+         </children>
+      </HBox>
+      <Label layoutX="144.0" layoutY="356.0" text="10대 : " />
+      <Label layoutX="144.0" layoutY="379.0" text="20대 : " />
+      <Label layoutX="144.0" layoutY="402.0" text="30대 : " />
+      <Label layoutX="144.0" layoutY="425.0" text="40대 : " />
+      <Label fx:id="labelAge0" layoutX="190.0" layoutY="356.0" text="0 명" />
+      <Label fx:id="labelAge1" layoutX="190.0" layoutY="379.0" text="0 명" />
+      <Label fx:id="labelAge2" layoutX="190.0" layoutY="402.0" text="0 명" />
+      <Label fx:id="labelAge3" layoutX="190.0" layoutY="425.0" text="0 명" />
+      <Label layoutX="490.0" layoutY="356.0" text="남성 : " />
+      <Label layoutX="490.0" layoutY="387.0" text="여성 : " />
+      <Label fx:id="labelGender0" layoutX="537.0" layoutY="356.0" text="0 명" />
+      <Label fx:id="labelGender1" layoutX="537.0" layoutY="387.0" text="0 명" />
+      <Label layoutX="452.0" layoutY="425.0" text="설문 조사 총 인원 : " textFill="#2b0deb">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelSum" layoutX="607.0" layoutY="425.0" text="0 명" textFill="#0c14f5">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="809.0" layoutY="356.0" text="해외여행 : " />
+      <Label layoutX="809.0" layoutY="387.0" text="국내여행 : " />
+      <Label layoutX="821.0" layoutY="418.0" text="없음 : " />
+      <Label fx:id="labelTravel0" layoutX="869.0" layoutY="356.0" text="0 명" />
+      <Label fx:id="labelTravel1" layoutX="869.0" layoutY="387.0" text="0 명" />
+      <Label fx:id="labelTravel2" layoutX="869.0" layoutY="418.0" text="0 명" />
+      <Label layoutX="412.0" layoutY="8.0" text="설문조사 결과" underline="true">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
+
