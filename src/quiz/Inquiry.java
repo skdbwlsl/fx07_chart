@@ -1,5 +1,5 @@
 package quiz;
-
+//모든값을 정리하는 값들
 public class Inquiry {
 	private int travel;
 	private int gender;

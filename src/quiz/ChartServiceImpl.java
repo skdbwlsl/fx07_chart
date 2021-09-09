@@ -1,5 +1,5 @@
 package quiz;
-
+//차트 표현
 import java.io.IOException;
 import java.util.*;
 
@@ -22,11 +22,11 @@ public class ChartServiceImpl{
 	private ArrayList<Label> labelTravelList;
 	private Label labelSum;
 	private int count;
-	
-	public ChartServiceImpl() {
+	//이거로 기본화면 띄워주는 것
+	public ChartServiceImpl() {  //생성자로 만들었다
 		
 		FXMLLoader loader =
-new FXMLLoader(getClass().getResource("viewchart.fxml"));
+new FXMLLoader(getClass().getResource("viewchart.fxml"));   //초기화화면 띄워주는 역할. 그러면서 기본띄어준다
 		try {
 			root = loader.load();
 		} catch (IOException e) {
@@ -37,7 +37,7 @@ new FXMLLoader(getClass().getResource("viewchart.fxml"));
 		areaChart = (AreaChart)root.lookup("#areaChart");
 		
 		labelGenderList = new ArrayList<>();
-		for(int i=0;i<2;i++) {
+		for(int i=0;i<2;i++) {  //i<2에서 2보단 size로 표현하는게 더 낫다
 			labelGenderList.add((Label)root.lookup("#labelGender"+i));
 		}
 		labelAgeList=new ArrayList<>();
@@ -51,13 +51,14 @@ new FXMLLoader(getClass().getResource("viewchart.fxml"));
 	}
 	
 	public void viewChart(ArrayList<Inquiry> lists) {
-		int ageList[] = new int[] {0,0,0,0};
-		int genderList[] = new int[] {0,0};
+		int ageList[] = new int[] {0,0,0,0};  //0 : 10,20,30,40대
+		int genderList[] = new int[] {0,0};   //남,여
 		int travelList[] = new int[] {0,0,0};
 		
 		for(int i=0;i<lists.size();i++) {
 			count++;
-			ageList[lists.get(i).getAge()]++;
+			//age : 0(10) 1(20) 2(30) 3(40대)
+			ageList[lists.get(i).getAge()]++;  //리스트의 get(i)을 getAge를 1씩 증가시켜라
 			genderList[lists.get(i).getGender()]++;
 			travelList[lists.get(i).getTravel()]++;
 		}
